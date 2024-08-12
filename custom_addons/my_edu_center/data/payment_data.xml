@@ -1,0 +1,8 @@
+<odoo>
+    <record id="payment_check_report_action" model="ir.actions.report">
+        <field name="name">Payment Check Report</field>
+        <field name="model">edu.payment</field>
+        <field name="report_name">my_edu_center.payment_check_report_template</field>
+        <field name="report_type">qweb-pdf</field>
+    </record>
+</odoo>

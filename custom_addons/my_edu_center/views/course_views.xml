@@ -1,0 +1,49 @@
+<odoo>
+    <!-- Root Menu Definition -->
+    <!-- <menuitem id="menu_edu_root" name="Educational Center" sequence="1"/> -->
+
+    <!-- Define the form view for the Course model -->
+    <record id="view_course_form" model="ir.ui.view">
+        <field name="name">edu.course.form</field>
+        <field name="model">edu.course</field>
+        <field name="arch" type="xml">
+            <form string="Course">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="teachers"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Define the tree view for the Course model -->
+    <record id="view_course_tree" model="ir.ui.view">
+        <field name="name">edu.course.tree</field>
+        <field name="model">edu.course</field>
+        <field name="arch" type="xml">
+            <tree string="Courses">
+                <field name="name"/>
+                <field name="teachers"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Define the action to open the Course views -->
+    <record id="action_courses" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">edu.course</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first Course
+            </p>
+        </field>
+    </record>
+
+    <!-- Add a menu item for the Course model -->
+    <menuitem id="menu_edu_courses" name="Courses" parent="menu_edu_root"
+              action="action_courses" sequence="30"/>
+</odoo>

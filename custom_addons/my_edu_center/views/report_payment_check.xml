@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Define the QWeb report template for the Payment Check -->
+    <template id="report_payment_check">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="payment">
+                <div class="page">
+                    <h2>Payment Check Report</h2>
+                    <p><strong>Student:</strong> <span t-field="payment.student_id.name"/></p>
+                    <p><strong>Group:</strong> <span t-field="payment.group_id.name"/></p>
+                    <p><strong>Amount:</strong> <span t-field="payment.amount"/> UZS</p>
+                    <p><strong>Payment Date:</strong> <span t-field="payment.payment_date"/></p>
+                    <p><strong>Payment Method:</strong> <span t-field="payment.payment_method"/></p>
+                    <p><strong>Comments:</strong></p>
+                    <p t-field="payment.comments"/>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

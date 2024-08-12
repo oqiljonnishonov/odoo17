@@ -1,0 +1,126 @@
+<odoo>
+    <!-- Access Control List for the Course model -->
+    <record id="access_course_admin" model="ir.model.access">
+        <field name="name">access.course.admin</field>
+        <field name="model_id" ref="model_edu_course"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_course_administrator" model="ir.model.access">
+        <field name="name">access.course.administrator</field>
+        <field name="model_id" ref="model_edu_course"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Access Control List for the Teacher model -->
+    <record id="access_teacher_admin" model="ir.model.access">
+        <field name="name">access.teacher.admin</field>
+        <field name="model_id" ref="model_edu_teacher"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_teacher_administrator" model="ir.model.access">
+        <field name="name">access.teacher.administrator</field>
+        <field name="model_id" ref="model_edu_teacher"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Access Control List for the Student model -->
+    <record id="access_student_admin" model="ir.model.access">
+        <field name="name">access.student.admin</field>
+        <field name="model_id" ref="model_edu_student"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_student_administrator" model="ir.model.access">
+        <field name="name">access.student.administrator</field>
+        <field name="model_id" ref="model_edu_student"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Access Control List for the Group model -->
+    <record id="access_group_admin" model="ir.model.access">
+        <field name="name">access.group.admin</field>
+        <field name="model_id" ref="model_edu_group"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_group_administrator" model="ir.model.access">
+        <field name="name">access.group.administrator</field>
+        <field name="model_id" ref="model_edu_group"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Access Control List for the Payment model -->
+    <record id="access_payment_admin" model="ir.model.access">
+        <field name="name">access.payment.admin</field>
+        <field name="model_id" ref="model_edu_payment"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_payment_administrator" model="ir.model.access">
+        <field name="name">access.payment.administrator</field>
+        <field name="model_id" ref="model_edu_payment"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="access_teacher_payment_admin" model="ir.model.access">
+        <field name="name">access.teacher.payment.admin</field>
+        <field name="model_id" ref="model_edu_payment"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="access_payment_administrator" model="ir.model.access">
+        <field name="name">access.teacher.payment.administrator</field>
+        <field name="model_id" ref="model_edu_payment"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+</odoo>

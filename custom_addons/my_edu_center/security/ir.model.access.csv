@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_course_admin,access.course.admin,model_edu_course,base.group_system,1,1,1,1
+access_teacher_admin,access.teacher.admin,model_edu_teacher,base.group_system,1,1,1,1
+access_student_admin,access.student.admin,model_edu_student,base.group_system,1,1,1,1
+access_group_admin,access.group.admin,model_edu_group,base.group_system,1,1,1,1
+access_payment_admin,access.payment.admin,model_edu_payment,base.group_system,1,1,1,1
+
+access_course_administrator,access.course.administrator,model_edu_course,base.group_user,1,0,1,0
+access_teacher_administrator,access.teacher.administrator,model_edu_teacher,base.group_user,1,0,1,0
+access_student_administrator,access.student.administrator,model_edu_student,base.group_user,1,0,1,0
+access_group_administrator,access.group.administrator,model_edu_group,base.group_user,1,0,1,0
+access_payment_administrator,access.payment.administrator,model_edu_payment,base.group_user,1,0,1,0
+
+access_edu_teacher_payment_manager,access.edu.teacher.payment.admin,model_edu_teacher_payment,base.group_erp_manager,1,1,1,1
+access_edu_teacher_payment_user,access.edu.teacher.payment.administrator,model_edu_teacher_payment,base.group_user,1,0,0,0

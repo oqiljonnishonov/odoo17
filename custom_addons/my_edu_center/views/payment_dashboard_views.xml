@@ -1,0 +1,66 @@
+<odoo>
+
+    <!-- Root Menu Definition -->
+    <menuitem id="menu_edu_root" name="Educational Center" sequence="1"/>
+
+    
+    <!-- Define the graph view for the Payment model -->
+    <record id="view_payment_graph" model="ir.ui.view">
+        <field name="name">payment.graph</field>
+        <field name="model">edu.payment</field>
+        <field name="arch" type="xml">
+            <graph string="Payments Overview" type="bar">
+                <field name="payment_date" type="date"/>
+                <field name="amount"/>
+                <field name="payment_method"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Define the tree view for the Payment model -->
+    <record id="view_payment_tree" model="ir.ui.view">
+        <field name="name">payment.tree</field>
+        <field name="model">edu.payment</field>
+        <field name="arch" type="xml">
+            <tree string="Payments">
+                <field name="student_id"/>
+                <field name="group_id"/>
+                <field name="amount"/>
+                <field name="payment_date"/>
+                <field name="payment_method"/>
+                <field name="comments"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Define the form view for the Payment model -->
+    <record id="view_payment_form" model="ir.ui.view">
+        <field name="name">payment.form</field>
+        <field name="model">edu.payment</field>
+        <field name="arch" type="xml">
+            <form string="Payment">
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="group_id"/>
+                        <field name="amount"/>
+                        <field name="payment_date"/>
+                        <field name="payment_method"/>
+                        <field name="comments"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Define the action to open the Payment views -->
+    <record id="action_payment_dashboard" model="ir.actions.act_window">
+        <field name="name">Payment Dashboard</field>
+        <field name="res_model">edu.payment</field>
+        <field name="view_mode">graph,tree,form</field>
+        <field name="view_id" ref="view_payment_graph"/>
+    </record>
+
+    <!-- Add the Payment Dashboard menu item -->
+    <menuitem id="menu_payment_dashboard" name="Payment Dashboard" parent="menu_edu_root" action="action_payment_dashboard" sequence="10"/>
+</odoo>

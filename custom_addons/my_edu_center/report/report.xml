@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+
+        <record id="report_payment_id_check" model="ir.actions.report">
+            <field name="name">Payment Check Report</field>
+            <field name="model">edu.payment</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">my_edu_center.report_payment_check</field>
+            <field name="report_file">my_edu_center.report_payment_check</field>
+            <field name="print_report_name">'Payment Report - %s' % (object.student_id.name)</field>
+            <field name="binding_model_id" ref="model_edu_payment"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,50 @@
+<odoo>
+    <!-- Define the form view for the Group model -->
+    <record id="view_group_form" model="ir.ui.view">
+        <field name="name">edu.group.form</field>
+        <field name="model">edu.group</field>
+        <field name="arch" type="xml">
+            <form string="Group">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="course_id"/>
+                        <field name="teacher_id"/>
+                        <field name="students_ids"/>
+                        <field name="payments"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Define the tree view for the Group model -->
+    <record id="view_group_tree" model="ir.ui.view">
+        <field name="name">edu.group.tree</field>
+        <field name="model">edu.group</field>
+        <field name="arch" type="xml">
+            <tree string="Groups">
+                <field name="name"/>
+                <field name="course_id"/>
+                <field name="teacher_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Define the action to open the Group views -->
+    <record id="action_groups" model="ir.actions.act_window">
+        <field name="name">Groups</field>
+        <field name="res_model">edu.group</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first Group
+            </p>
+        </field>
+    </record>
+
+    <!-- Add a menu item for the Group model -->
+    <menuitem id="menu_edu_groups" name="Groups" parent="menu_edu_root"
+              action="action_groups" sequence="60"/>
+</odoo>

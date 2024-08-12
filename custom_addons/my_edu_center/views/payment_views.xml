@@ -1,0 +1,62 @@
+<odoo>
+    
+    <record id="view_payment_form" model="ir.ui.view">
+        <field name="name">edu.payment.form</field>
+        <field name="model">edu.payment</field>
+        <field name="arch" type="xml">
+            <form string="Payment">
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="group_id"/>
+                        <field name="amount"/>
+                        <field name="payment_date"/>
+                        <field name="payment_method"/>
+                        <field name="comments"/>
+                    </group>
+                </sheet>
+                <footer>
+
+                    <!-- <button type="object" name="action_save" string="Save" class="btn-primary" special="save"/>
+                    <button type="object" name="action_save_new" string="Save  New" class="btn-primary" special="save_new"/>
+                    <button type="object" name="action_cancel" string="Discard" class="btn-secondary" special="cancel"/>
+                    
+                    <button type="button" class="btn-primary o_form_button_save" special="save"/>
+                    <button type="button" class="btn-primary o_form_button_save_new" special="save_new"/>
+                    <button type="button" class="btn-secondary o_form_button_cancel" special="cancel"/> -->
+                    <button name="action_print_payment_check" string="Print Payment Check" type="object" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    
+    <record id="view_payment_tree" model="ir.ui.view">
+        <field name="name">edu.payment.tree</field>
+        <field name="model">edu.payment</field>
+        <field name="arch" type="xml">
+            <tree string="Payments">
+                <field name="student_id"/>
+                <field name="group_id"/>
+                <field name="amount"/>
+                <field name="payment_date"/>
+                <field name="payment_method"/>
+            </tree>
+        </field>
+    </record>
+
+    
+    <record id="action_payments" model="ir.actions.act_window">
+        <field name="name">Payments</field>
+        <field name="res_model">edu.payment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first Payment record
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_edu_payments" name="Payments" parent="menu_edu_root"
+              action="action_payments" sequence="20"/>
+</odoo>
