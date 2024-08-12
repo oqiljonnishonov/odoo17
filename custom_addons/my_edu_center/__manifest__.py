@@ -4,7 +4,7 @@
     'summary': 'Manage courses, teachers, students, groups, and payments in an educational center.',
     'author': 'Author name',
     'category': 'Education',
-    'depends': ['base', 'mail','web'],  # Include other necessary modules
+    'depends': ['base', 'mail','web'], 
     'data': [
         'security/ir.model.access.xml',
         'security/groups.xml',
