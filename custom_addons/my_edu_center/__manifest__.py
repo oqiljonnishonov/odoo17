@@ -2,7 +2,7 @@
     'name': 'Education Center Management',
     'version': '1.0',
     'summary': 'Manage courses, teachers, students, groups, and payments in an educational center.',
-    'author': 'Author name',
+    'author': 'Oqil Islomov',
     'category': 'Education',
     'depends': ['base', 'mail','web'], 
     'data': [
